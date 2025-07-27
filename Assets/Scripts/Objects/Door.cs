@@ -16,7 +16,7 @@ namespace Assets.Scripts.Objects
         // Start is called once before the first execution of Update after the MonoBehaviour is created
         void Start()
         {
-            _startPosition = transform.position;
+            _startPosition = transform.localPosition;
         }
 
         public void OpenTheDoor()
@@ -44,7 +44,7 @@ namespace Assets.Scripts.Objects
 
         private void AnimateDoor(float value, Ease ease)
         {
-            transform.DOMoveZ(_startPosition.z + value, _animationSpeed).SetUpdate(true).SetEase(ease);
+            transform.DOLocalMoveZ(_startPosition.z + value, _animationSpeed).SetUpdate(true).SetEase(ease);
         }
     }
 }
