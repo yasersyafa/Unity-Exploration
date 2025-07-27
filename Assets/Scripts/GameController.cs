@@ -1,10 +1,12 @@
+using Assets.Scripts.Utils;
 using UnityEngine;
 
-public class GameController : MonoBehaviour
+public class GameController : MonoSingleton<GameController>
 {
     private InputSystem_Actions _inputActions;
-    private void Awake()
+    public override void Awake()
     {
+        base.Awake();
         _inputActions = new();
     }
 
