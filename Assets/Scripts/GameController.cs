@@ -10,6 +10,8 @@ public class GameController : MonoSingleton<GameController>
         _inputActions = new();
     }
 
+    public InputSystem_Actions GetInputActions() => _inputActions;
+
     private void OnEnable()
     {
         _inputActions.Player.Enable();

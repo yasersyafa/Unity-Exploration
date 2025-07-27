@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2886728348154796071}
   - component: {fileID: 6876264134116083848}
+  - component: {fileID: 6562497977387538821}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -58,6 +59,23 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0.6, z: 0}
+--- !u!114 &6562497977387538821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 113482672287399471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3e56a5a38c5a4c2ebbb43979b6a7c46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _playerAnimator: {fileID: 53495634605952330}
+  _moveSpeed: 4
+  _gravity: -5
+  _rotateSpeed: 10
+  _gameController: {fileID: 0}
 --- !u!1001 &278260052096272078
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -66,6 +84,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2886728348154796071}
     m_Modifications:
+    - target: {fileID: 243926603113532292, guid: ed84b15b632f06b45978ed64721ae6c6, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 52b39c5cbd22242718018d24a11ec270, type: 2}
     - target: {fileID: 6161686391465202174, guid: ed84b15b632f06b45978ed64721ae6c6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -115,6 +137,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed84b15b632f06b45978ed64721ae6c6, type: 3}
+--- !u!95 &53495634605952330 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 243926603113532292, guid: ed84b15b632f06b45978ed64721ae6c6, type: 3}
+  m_PrefabInstance: {fileID: 278260052096272078}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6223448206001641264 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6161686391465202174, guid: ed84b15b632f06b45978ed64721ae6c6, type: 3}
